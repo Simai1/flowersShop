@@ -12,8 +12,9 @@ const app = express();
     } catch (e) {
         console.log(e);
         console.log('COULD NOT CONNECT TO THE DB, retrying in 5 seconds');
+        setTimeout(initDb, 5000);
     }
-    setTimeout(initDb, 5000);
+
 })();
 
 app.use(express.json({ limit: '10mb' }));
