@@ -4,7 +4,6 @@ export default class Order extends Model {
     static initialize(sequelize) {
         Order.init(
             {
-                id: { type: DataTypes.INTEGER, primaryKey: true },
                 date: { type: DataTypes.DATE, allowNull: false, defaultValue: Sequelize.fn('now') },
                 isDelivered: { type: DataTypes.BOOLEAN, allowNull: false, defaultValue: false }
             },

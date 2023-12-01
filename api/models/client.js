@@ -5,7 +5,6 @@ export default class Client extends Model {
     static initialize(sequelize) {
         Client.init(
             {
-                id: {type: DataTypes.INTEGER, primaryKey: true},
                 login: {
                     type: DataTypes.STRING,
                     allowNull: false,

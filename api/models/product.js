@@ -4,7 +4,6 @@ export default class Product extends Model {
     static initialize(sequelize) {
         Product.init(
             {
-                id: { type: DataTypes.INTEGER, primaryKey: true },
                 name: { type: DataTypes.STRING, allowNull: false },
                 description: { type: DataTypes.STRING, allowNull: true },
                 price: {type: DataTypes.REAL, allowNull: false },
