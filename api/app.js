@@ -9,6 +9,8 @@ const app = express();
 (async function initDb() {
     try {
         await dbUtils.initializeDbModels();
+        await dbUtils.createTestUser();
+        await dbUtils.createTestUser2();
     } catch (e) {
         console.log(e);
         console.log('COULD NOT CONNECT TO THE DB, retrying in 5 seconds');

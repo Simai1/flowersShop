@@ -29,6 +29,6 @@ export default {
         const CheckUser = await Client.findOne({ where: { login: login } });
         if (!CheckUser || !CheckUser.validatePassword(password)) throw new AppErrorInvalid("login or password");
 
-        res.json({ user });
+        res.json({ status: 'OK' });
     }
 }

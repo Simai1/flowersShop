@@ -3,6 +3,7 @@ import Client from "./client.js";
 import Order from "./order.js";
 import OrderForProduct from "./order-for-product.js";
 import Product from "./product.js";
+import "dotenv/config"
 
 
 export const models = {
