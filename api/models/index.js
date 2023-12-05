@@ -4,7 +4,6 @@ import Order from "./order.js";
 import OrderForProduct from "./order-for-product.js";
 import Product from "./product.js";
 
-const { DB_USER, DB_PWD, DB_HOST, DB_PORT } = process.env;
 
 export const models = {
   Client,
@@ -12,9 +11,10 @@ export const models = {
   Product,
   OrderForProduct,
 };
-export const sequelize = new Sequelize(process.env.NODE_ENV, DB_USER, DB_PWD, {
-    host: DB_HOST,
-    port: DB_PORT,
+export const sequelize = new Sequelize('flowers', 'postgres', '1323', {
+    
+  host: 'localhost',
+    port: 5432,
     dialect: 'postgres',
     // dialectOptions: { multipleStatements: true },
     define: {
