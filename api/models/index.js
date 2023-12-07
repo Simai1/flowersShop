@@ -5,6 +5,7 @@ import OrderForProduct from "./order-for-product.js";
 import Product from "./product.js";
 import "dotenv/config"
 
+const { DB_USER, DB_PWD, DB_HOST, DB_PORT } = process.env;
 
 export const models = {
   Client,
@@ -12,17 +13,16 @@ export const models = {
   Product,
   OrderForProduct,
 };
-export const sequelize = new Sequelize('flowers', 'postgres', '1323', {
-    
-  host: 'localhost',
-    port: 5432,
-    dialect: 'postgres',
-    // dialectOptions: { multipleStatements: true },
-    define: {
-        // charset: 'utf8mb4',
-        // collate: 'utf8mb4_unicode_ci',
-        timestamps: true,
-        underscored: true,
-    },
-    logging: false,
+export const sequelize = new Sequelize(process.env.NODE_ENV, DB_USER, DB_PWD, {
+  host: DB_HOST,
+  port: DB_PORT,
+  dialect: 'postgres',
+  // dialectOptions: { multipleStatements: true },
+  define: {
+    // charset: 'utf8mb4',
+    // collate: 'utf8mb4_unicode_ci',
+    timestamps: true,
+    underscored: true,
+  },
+  logging: false,
 });
