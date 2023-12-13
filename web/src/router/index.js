@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import LoginPage from "@/pages/LoginPage";
 import RegisterPage from '@/pages/RegisterPage';
-
+import ShopPage from '@/pages/ShopPage';
 
 const routes = [
   {
-    path: '/login',
+    path: '/',
     name: 'loginpage',
     component: LoginPage
   },
@@ -14,7 +14,11 @@ const routes = [
     name: 'registerpage',
     component: RegisterPage
   },
- 
+  {
+    path: '/shop',
+    name: 'shoppage',
+    component: ShopPage
+  },
 ]
 
 const router = createRouter({

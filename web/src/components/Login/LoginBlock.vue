@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/layout/index.scss';
+@import '@/assets/layout/index.scss';
 
 #LoginBlock
 {

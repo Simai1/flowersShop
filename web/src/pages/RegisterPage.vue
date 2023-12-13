@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import RegisterBlock from '../components/RegisterBlock.vue'
+import RegisterBlock from '../components/Register/RegisterBlock.vue'
 export default {
   components: { RegisterBlock },
 
@@ -28,6 +28,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 
 }
 
@@ -38,7 +39,7 @@ export default {
   justify-content: center;
   align-items: center;
 
-  
+
   #RegisterBlock
   {
     width: 50%;

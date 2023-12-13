@@ -11,8 +11,8 @@ placeholder="Password"
 </template>
 
 <script>
-import MyButton from './UI/MyButton.vue'
-import MyInput from './UI/MyInput.vue'
+import MyButton from '../UI/MyButton.vue'
+import MyInput from '../UI/MyInput.vue'
 export default {
   components: { MyInput, MyButton },
 
@@ -39,7 +39,7 @@ input::placeholder
 .Login_btn
 {
  
-  
+
   span
   {
       @include adaptiv-font(30, 7);

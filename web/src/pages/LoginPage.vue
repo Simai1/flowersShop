@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import LoginBlock from '../components/LoginBlock.vue'
+import LoginBlock from '../components/Login/LoginBlock.vue'
 
 export default {
   components: { LoginBlock },
@@ -29,7 +29,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 

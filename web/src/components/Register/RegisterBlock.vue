@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/layout/index.scss';
+@import '@/assets/layout/index.scss';
 
 #RegisterBlock
 {
@@ -73,7 +73,7 @@ margin: 10% 5% 0%;
       color: #838383;
     }
 
-    
+
 
 .RegisterBlock_register
 {
