@@ -10,3 +10,8 @@ $maxWidth: 1440;
 		font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
 	}
 }
+
+@mixin adaptiv-height($Size) 
+{
+	height: calc( #{$Size} *100vw / #{$maxWidth});
+}

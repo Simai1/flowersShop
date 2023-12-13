@@ -3,7 +3,6 @@
     <div class="LoginBlock_title">
         <div class="LoginBlock_title_head">
             <div class="LoginBlock_title_head_login"><span>Login</span></div>
-            <div class="LoginBlock_title_head_home"><img src="@/assets/pictures/home_vector.svg"/><span>Back to home</span></div>
         </div>
         <div class="LoginBlock_title_desc"><span>Login and have more fun</span></div>
     </div>
@@ -22,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/layout/index.scss';
+@import '../assets/layout/index.scss';
 
 #LoginBlock
 {
@@ -49,21 +48,13 @@ margin: 10% 5% 0%;
 .LoginBlock_title_head
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
+    align-items: center;
     .LoginBlock_title_head_login
     {
-      @include adaptiv-font(32, 20);
+      @include adaptiv-font(55, 10);
     }
-    .LoginBlock_title_head_home
-    {
-      @include adaptiv-font(18, 14);
-
-      img
-      {
-        height: 37%;
-        margin-bottom: 6%;
-      }
-    }
+    
     .LoginBlock_title_head_home:hover
     {
       color: $primary;
@@ -72,7 +63,7 @@ margin: 10% 5% 0%;
 }
 .LoginBlock_title_desc
     {
-      @include adaptiv-font(18, 14);
+      @include adaptiv-font(30, 7);
       color: #838383;
     }
 
@@ -82,7 +73,7 @@ margin: 10% 5% 0%;
   margin-bottom: 10%;
     display: flex;
     justify-content: center;
-    @include adaptiv-font(18, 14);
+    @include adaptiv-font(30, 7);
     color: #838383;
     span
     {

@@ -1,12 +1,12 @@
 <template>
   <form @submit.prevent> 
     <my-input
-    placeholder="e-mail"
+    placeholder="E-mail"
     ></my-input>
 <my-input
-placeholder="password"
+placeholder="Password"
 ></my-input>
-<my-button><span >Login</span></my-button>
+<my-button class="Login_btn"><span >Login</span></my-button>
   </form>
 </template>
 
@@ -28,17 +28,24 @@ flex-direction: column;
 
 input
 {
-    margin: 10px 5%;
+    margin: 2% 5%;
+
+    @include adaptiv-font(30, 8);
 }
-button
+input::placeholder
+    {
+      @include adaptiv-font(30, 7);
+    }
+.Login_btn
 {
+ 
   span
   {
-      @include adaptiv-font(20, 15);
+      @include adaptiv-font(30, 7);
   }
 
-    margin: 10px 5%;
-  
+    margin: 2% 5%;
+  @include adaptiv-height(60);
 }
 }
 </style>
