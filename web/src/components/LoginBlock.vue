@@ -29,9 +29,8 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     background: $bground;
-    
-
 }
+
 
 .LoginBlock_title
 {
@@ -73,7 +72,7 @@ margin: 10% 5% 0%;
   margin-bottom: 10%;
     display: flex;
     justify-content: center;
-    @include adaptiv-font(30, 7);
+    @include adaptiv-font(30, 14);
     color: #838383;
     span
     {

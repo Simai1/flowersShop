@@ -32,6 +32,7 @@ export default {
 
 }
 
+
 #LoginPage_block
 {
   width: 68%;

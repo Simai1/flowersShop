@@ -39,6 +39,7 @@ input::placeholder
 .Login_btn
 {
  
+  
   span
   {
       @include adaptiv-font(30, 7);
