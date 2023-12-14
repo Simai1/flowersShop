@@ -20,6 +20,11 @@ export default {
     background: $primary;
     border: 0;
     border-radius: 4px;
+    box-shadow: 5px 2px 2px grey;
 }
-
+._btn:hover
+{
+    background: $primaryDark;
+    box-shadow: 3px 2px 2px grey;
+}
 </style>

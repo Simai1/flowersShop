@@ -7,7 +7,7 @@
         <div class="LoginBlock_title_desc"><span>Login and have more fun</span></div>
     </div>
     <div class="LoginBlock_form"><login-form></login-form></div>
-    <div class="LoginBlock_register"><span>dont have account? </span><span class="LoginBlock_register_link">Register</span></div>
+    <div class="LoginBlock_register"><span>don't have account? </span><span class="LoginBlock_register_link">Register</span></div>
 
   </div>
 </template>
@@ -29,6 +29,8 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     background: $bground;
+    font-family: 'Poppins';
+    font-weight: 400;
 }
 
 
@@ -40,10 +42,7 @@ justify-content: center;
 margin: 10% 5% 0%;
 }
 
-.LoginBlock_form
-{
 
-}
 .LoginBlock_title_head
 {
     display: flex;
@@ -52,6 +51,8 @@ margin: 10% 5% 0%;
     .LoginBlock_title_head_login
     {
       @include adaptiv-font(55, 10);
+      font-family: 'undefined';
+      font-weight: 700;
     }
     
     .LoginBlock_title_head_home:hover
@@ -72,7 +73,7 @@ margin: 10% 5% 0%;
   margin-bottom: 10%;
     display: flex;
     justify-content: center;
-    @include adaptiv-font(30, 14);
+    @include adaptiv-font(30, 7);
     color: #838383;
     span
     {
