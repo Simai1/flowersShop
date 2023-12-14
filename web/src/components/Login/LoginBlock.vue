@@ -46,7 +46,7 @@ margin: 10% 5% 0%;
 .LoginBlock_title_head
 {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     .LoginBlock_title_head_login
     {

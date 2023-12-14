@@ -15,6 +15,10 @@ $maxWidth: 1440;
 {
 	height: calc( #{$Size} *100vw / #{$maxWidth});
 }
+@mixin adaptiv-wigth($Size) 
+{
+	width: calc( #{$Size} *100vw / #{$maxWidth});
+}
 
 @mixin adaptiv-height-wigth($SizeH, $SizeW) 
 {

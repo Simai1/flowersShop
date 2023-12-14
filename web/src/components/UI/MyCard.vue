@@ -34,7 +34,7 @@ export default {
 {
   box-shadow: 5px 2px 2px grey;
   background: $forCard !important;
-  margin: 2%;
+  margin: 1%;
 
   .list-group-item
   {

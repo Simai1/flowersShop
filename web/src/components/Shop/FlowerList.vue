@@ -1,7 +1,5 @@
 <template>
-  <div id="AboutPage">
 
-  </div>
 </template>
 
 <script>
@@ -12,8 +10,5 @@ export default {
 
 <style lang="scss">
 @import '@/assets/layout/index.scss';
-#AboutPage
-{
-    
-}
+
 </style>
