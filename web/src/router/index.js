@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import LoginPage from "@/pages/LoginPage";
 import RegisterPage from '@/pages/RegisterPage';
-
 import ShopPage from '@/pages/ShopPage';
 import AboutPage from '@/pages/AboutPage';
 import MePage from '@/pages/MePage';
@@ -18,6 +17,7 @@ const routes = [
     name: 'registerpage',
     component: RegisterPage
   },
+
   {
     path: '/shop',
     name: 'shoppage',

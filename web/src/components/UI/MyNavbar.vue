@@ -31,6 +31,7 @@ export default {
 .navbar
 {
    background: $bground !important;
+   box-shadow: 0 2px 2px grey;
    
    
 }

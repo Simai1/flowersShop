@@ -1,5 +1,6 @@
 <template>
   <div id="App">
+    <my-navbar></my-navbar>
     <router-view></router-view>
   </div>
 </template>
@@ -18,8 +19,5 @@ export default {
 
 <style lang="scss">
 @import '@/assets/layout/index.scss';
-#App
-{
 
-}
 </style>

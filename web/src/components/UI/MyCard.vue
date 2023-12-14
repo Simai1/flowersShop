@@ -1,0 +1,44 @@
+<template>
+  <div class="card" style="width: 18rem;">
+  <img v-bind:src="image1" class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title">bouquet title</h5>
+    <p class="card-text"><span>bouquet description</span></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><span>Price ₽</span></li>
+  </ul>
+  <div class="card-body">
+    <!-- <a href="#" class="card-link">Card link</a> -->
+    <my-button><span>Put in the basket</span></my-button>
+  </div>
+</div>
+</template>
+
+<script>
+import MyButton from './MyButton.vue'
+export default {
+  components: { MyButton },
+  name: 'my-card',
+  data(){
+    return{
+      image1:'https://otkritkis.com/wp-content/uploads/2022/06/r62xx.jpg',
+    }
+  },
+}
+</script>
+
+<style lang="scss">
+@import '@/assets/layout/index.scss';
+.card
+{
+  box-shadow: 5px 2px 2px grey;
+  background: $forCard !important;
+  margin: 2%;
+
+  .list-group-item
+  {
+    background: $forCard !important;
+  }
+}
+</style>
