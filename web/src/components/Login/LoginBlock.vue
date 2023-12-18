@@ -3,12 +3,11 @@
     <div class="LoginBlock_title">
         <div class="LoginBlock_title_head">
             <div class="LoginBlock_title_head_login"><span>Login</span></div>
-            <div class="LoginBlock_title_head_home"><img src="@/assets/pictures/home_vector.svg"/><span>Back to home</span></div>
         </div>
         <div class="LoginBlock_title_desc"><span>Login and have more fun</span></div>
     </div>
     <div class="LoginBlock_form"><login-form></login-form></div>
-    <div class="LoginBlock_register"><span>dont have account? </span><span class="LoginBlock_register_link">Register</span></div>
+    <div class="LoginBlock_register"><span>don't have account? </span><span class="LoginBlock_register_link">Register</span></div>
 
   </div>
 </template>
@@ -30,9 +29,10 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     background: $bground;
-    
-
+    font-family: 'Poppins';
+    font-weight: 400;
 }
+
 
 .LoginBlock_title
 {
@@ -42,28 +42,19 @@ justify-content: center;
 margin: 10% 5% 0%;
 }
 
-.LoginBlock_form
-{
 
-}
 .LoginBlock_title_head
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
     .LoginBlock_title_head_login
     {
-      @include adaptiv-font(32, 20);
+      @include adaptiv-font(55, 10);
+      font-family: 'undefined';
+      font-weight: 700;
     }
-    .LoginBlock_title_head_home
-    {
-      @include adaptiv-font(18, 14);
-
-      img
-      {
-        height: 37%;
-        margin-bottom: 6%;
-      }
-    }
+    
     .LoginBlock_title_head_home:hover
     {
       color: $primary;
@@ -72,7 +63,7 @@ margin: 10% 5% 0%;
 }
 .LoginBlock_title_desc
     {
-      @include adaptiv-font(18, 14);
+      @include adaptiv-font(30, 7);
       color: #838383;
     }
 
@@ -82,7 +73,7 @@ margin: 10% 5% 0%;
   margin-bottom: 10%;
     display: flex;
     justify-content: center;
-    @include adaptiv-font(18, 14);
+    @include adaptiv-font(30, 7);
     color: #838383;
     span
     {

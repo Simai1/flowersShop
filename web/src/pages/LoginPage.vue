@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import LoginBlock from '../components/LoginBlock.vue'
+import LoginBlock from '../components/Login/LoginBlock.vue'
 
 export default {
   components: { LoginBlock },
@@ -29,8 +29,8 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
 
 #LoginPage_block
 {
@@ -42,7 +42,8 @@ export default {
   #LoginBlock
   {
     width: 50%;
-    height:calc(634px*100vw/1440px);
+
+    @include adaptiv-height(634);
   }
   #LoginPage_pic
   {
@@ -51,10 +52,5 @@ export default {
   }
 
 }
-
-
-// .LoginPage_pic{
-//     height: 400px;
-// }
 
 </style>

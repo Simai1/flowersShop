@@ -10,3 +10,18 @@ $maxWidth: 1440;
 		font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
 	}
 }
+
+@mixin adaptiv-height($Size) 
+{
+	height: calc( #{$Size} *100vw / #{$maxWidth});
+}
+@mixin adaptiv-wigth($Size) 
+{
+	width: calc( #{$Size} *100vw / #{$maxWidth});
+}
+
+@mixin adaptiv-height-wigth($SizeH, $SizeW) 
+{
+	height: calc( #{$SizeH} *100vw / #{$maxWidth});
+	width: calc( #{$SizeW} *100vw / #{$maxWidth});
+}
