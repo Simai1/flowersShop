@@ -1,12 +1,12 @@
 <template>
   <div class="card" style="width: 18rem;">
-  <img v-bind:src="image1" class="card-img-top">
+  <img v-bind:src="card.img_url" class="card-img-top">
   <div class="card-body">
-    <h5 class="card-title">bouquet title</h5>
-    <p class="card-text"><span>bouquet description</span></p>
+    <h5 class="card-title">{{card.name}}</h5>
+    <p class="card-text"><span>{{card.description}}</span></p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><span>Price ₽</span></li>
+    <li class="list-group-item"><span>{{ card.price }}</span></li>
   </ul>
   <div class="card-body">
     <!-- <a href="#" class="card-link">Card link</a> -->
@@ -25,6 +25,13 @@ export default {
       image1:'https://otkritkis.com/wp-content/uploads/2022/06/r62xx.jpg',
     }
   },
+  props:{
+        card:
+        {
+            type: Object,
+            required: false,
+        }
+    }
 }
 </script>
 

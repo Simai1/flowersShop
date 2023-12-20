@@ -8,18 +8,63 @@
    
 
 
-  <my-card></my-card>
+  <flower-list
+  :cards="products"
+  />
   </div>
 </template>
 
 <script>
+import FlowerList from '../components/Shop/FlowerList.vue'
 import MyInput from '../components/UI/MyInput.vue'
-
+import axios from 'axios';
 import MyNavbar from '../components/UI/MyNavbar.vue'
 import MySelect from '../components/UI/MySelect.vue'
 export default {
-  components: { MyNavbar, MyInput, MySelect,  },
+  components: { MyNavbar, MyInput, MySelect, FlowerList,  },
 
+  data()
+    {
+        return{
+           
+            products:[
+                // {
+                //   name: 'flowers1',
+                //   description: 'description1',
+                //   price:1,
+                //   img_url:'https://otkritkis.com/wp-content/uploads/2022/06/r62xx.jpg',
+                // },
+                // {
+                //   title: 'flowers2',
+                //   desc: 'description2',
+                //   price:1,
+                //   img:'abc',
+                // },
+                // {
+                //   id: 3,
+                //   title: 'flowers3',
+                //   desc: 'description3',
+                //   price:3,
+                //   img:'abc',
+                // },
+            ],
+           
+        }
+    },
+    methods: {
+
+     async loadFlowers()
+      {
+  
+        const response = await axios.get('http://localhost:3000/product/flowers');
+        console.log(response);
+      }
+
+    },
+    mounted() {
+            this.loadFlowers();
+            
+        },
 }
 </script>
 
