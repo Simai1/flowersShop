@@ -24,14 +24,14 @@ export default {
     async get({ body: { sort }}, res) {
         if (sort && sort !== 'ASC' && sort !== 'DESC') throw new AppErrorInvalid('sort');
         if (!sort){
-            const products = await Product.findAll({attributes: ['name', 'description', 'price', 'img_url']});
+            const products = await Product.findAll({attributes: ['id', 'name', 'description', 'price', 'img_url']});
             res.json({ products });
         } else {
             const products = await Product.findAll({
                     order: [
                         ['price', sort],
                     ],
-                    attributes: ['name', 'description', 'price', 'img_url']
+                    attributes: ['id', 'name', 'description', 'price', 'img_url']
                 });
             res.json({ products });
         }
