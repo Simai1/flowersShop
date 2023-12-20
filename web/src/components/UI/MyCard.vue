@@ -1,9 +1,9 @@
 <template>
   <div class="card" style="width: 18rem;">
-  <img v-bind:src="image1" class="card-img-top">
+  <img v-bind:src="card.img_url" class="card-img-top">
   <div class="card-body">
-    <h5 class="card-title">{{card.title}}</h5>
-    <p class="card-text"><span>{{card.desc}}</span></p>
+    <h5 class="card-title">{{card.name}}</h5>
+    <p class="card-text"><span>{{card.description}}</span></p>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item"><span>{{ card.price }}</span></li>

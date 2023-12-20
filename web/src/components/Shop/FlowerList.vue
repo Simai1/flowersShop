@@ -2,7 +2,7 @@
     <div id ="flower_list">
         <my-card
 v-for="card in cards"
-:key="card.id"
+:key="card.name"
 :card="card"
 />
     </div>
