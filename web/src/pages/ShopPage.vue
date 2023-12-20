@@ -14,7 +14,7 @@
 
 <script>
 import MyInput from '../components/UI/MyInput.vue'
-
+// import axios from 'axios';
 import MyNavbar from '../components/UI/MyNavbar.vue'
 import MySelect from '../components/UI/MySelect.vue'
 export default {
