@@ -8,17 +8,51 @@
    
 
 
-  <my-card></my-card>
+  <flower-list
+  :cards="cards"
+  />
   </div>
 </template>
 
 <script>
+import FlowerList from '../components/Shop/FlowerList.vue'
 import MyInput from '../components/UI/MyInput.vue'
 // import axios from 'axios';
 import MyNavbar from '../components/UI/MyNavbar.vue'
 import MySelect from '../components/UI/MySelect.vue'
 export default {
-  components: { MyNavbar, MyInput, MySelect,  },
+  components: { MyNavbar, MyInput, MySelect, FlowerList,  },
+
+  data()
+    {
+        return{
+           
+            cards:[
+                {
+                  id: 1,
+                  title: 'flowers1',
+                  desc: 'description1',
+                  price:1,
+                  img:'abc',
+                },
+                {
+                  id: 2,
+                  title: 'flowers2',
+                  desc: 'description2',
+                  price:1,
+                  img:'abc',
+                },
+                {
+                  id: 3,
+                  title: 'flowers3',
+                  desc: 'description3',
+                  price:3,
+                  img:'abc',
+                },
+            ],
+           
+        }
+    },
 
 }
 </script>

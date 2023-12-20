@@ -2,17 +2,48 @@
   <div id="NewFlower">
     <div class="NewFlower_name"><h2 class="NewFlower_name_text">New flowers</h2></div>
 <div class="NewFlower_cards">
-<my-card></my-card>
-<my-card></my-card>
-<my-card></my-card>
+<flower-list
+:cards="cards"
+/>
 </div>
   </div>
 </template>
 
 <script>
+import FlowerList from '../Shop/FlowerList.vue'
 
 export default {
- 
+  components: { FlowerList },
+    data()
+    {
+        return{
+           
+            cards:[
+                {
+                  id: 1,
+                  title: 'flowers1',
+                  desc: 'description1',
+                  price:1,
+                  img:'abc',
+                },
+                {
+                  id: 2,
+                  title: 'flowers2',
+                  desc: 'description2',
+                  price:1,
+                  img:'abc',
+                },
+                {
+                  id: 3,
+                  title: 'flowers3',
+                  desc: 'description3',
+                  price:3,
+                  img:'abc',
+                },
+            ],
+           
+        }
+    },
 
 }
 </script>
@@ -60,10 +91,13 @@ export default {
     .NewFlower_cards
     {
         width: 100%;
-        display: flex;
-        justify-content: space-around;
         flex-direction: row;
         flex-wrap: wrap;
+        #flower_list
+{
+  display: flex;
+  justify-content: center;
+}
     }
 }
 
