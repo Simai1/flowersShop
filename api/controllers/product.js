@@ -38,6 +38,11 @@ export default {
         }
     },
 
+    async get3Products(req, res){
+        const products = await Product.findAll({limit: 3, attributes: ['id', 'name', 'description', 'price', 'img_url']});
+        res.json({ products });
+    },
+
     async updatePrice({body: {name, price}}, res) {
         if (!name) throw new AppErrorMissing('name');
         if (!price) throw new AppErrorMissing('price');
