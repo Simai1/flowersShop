@@ -38,7 +38,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  box-shadow: 5px 4px 2px grey;
 
   #RegisterBlock
   {

@@ -6,11 +6,11 @@
     <p class="card-text"><span>{{card.description}}</span></p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><span>{{ card.price }}</span></li>
+    <li class="list-group-item"><span>{{ card.price }} ₽</span></li>
   </ul>
   <div class="card-body">
     <!-- <a href="#" class="card-link">Card link</a> -->
-    <my-button><span>Put in the basket</span></my-button>
+    <my-button><span>{{btn_text}}</span></my-button>
   </div>
 </div>
 </template>
@@ -30,6 +30,10 @@ export default {
         {
             type: Object,
             required: false,
+        },
+        btn_text:
+        {
+          type: String,
         }
     }
 }
