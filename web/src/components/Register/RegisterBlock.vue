@@ -7,7 +7,7 @@
         <div class="RegisterBlock_title_desc"><span>Register and help as help you</span></div>
     </div>
     <div class="RegisterBlock_form"><register-form></register-form></div>
-    <div class="RegisterBlock_register"><span>Already have an account? </span><span class="RegisterBlock_register_link">Login</span></div>
+    <div class="RegisterBlock_register"><span>Already have an account? </span><span class="RegisterBlock_register_link"  @click="$router.push('/')" href ="">Login</span></div>
 
   </div>
 </template>

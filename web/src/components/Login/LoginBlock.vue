@@ -7,7 +7,7 @@
         <div class="LoginBlock_title_desc"><span>Login and have more fun</span></div>
     </div>
     <div class="LoginBlock_form"><login-form></login-form></div>
-    <div class="LoginBlock_register"><span>don't have account? </span><span class="LoginBlock_register_link">Register</span></div>
+    <div class="LoginBlock_register"><span>don't have account? </span><span class="LoginBlock_register_link" @click="$router.push('/register')" href ="#">Register</span></div>
 
   </div>
 </template>

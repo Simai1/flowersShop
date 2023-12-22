@@ -2,7 +2,7 @@
     <div id ="flower_list">
         <my-card
 v-for="card in cards"
-:key="card.name"
+:key="card.id"
 :card="card"
 :btn_text="btn_txt"
 />

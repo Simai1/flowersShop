@@ -2,14 +2,21 @@
   <div id="ShopPage">
     <div class="ShopPage_search">
       <my-input
-    placeholder="Search...."></my-input>
-    <my-select></my-select>
+      v-model="search"
+      @change="Search"
+    placeholder="Search...." 
+    
+    ></my-input>
+    <my-select
+    v-model="selectedSort"
+    @change ="Sorted"
+    ></my-select>
       </div>  
    
 
 
   <flower-list
-  :cards="sortedArray"
+  :cards="products"
   :btn_txt="btn_txt"
   />
   </div>
@@ -27,7 +34,7 @@ export default {
   data()
     {
         return{
-           
+           search:'',
             products:[  ],
             btn_txt:'Put in the basket',
             selectedSort: '',
@@ -44,17 +51,37 @@ export default {
 
 
     methods: {
+       
+
+
 
      async loadFlowers()
       {
-        var formdata = new FormData();
 
-        formdata.append("sort", "ASC");
-
-        const response = await axios.get('http://localhost:3000/product/flowers');
+        
+        const response = await axios.get('http://localhost:3000/product/flowers/');
         this.products = response.data.products;
         console.log(response);
+      },
+      async Search()
+      {
+        const response =  await axios.get('http://localhost:3000/product/flowers/'+ this.search);
+        this.products = response.data.products;
+        return this.products;
+      },
+      Sorted()
+      {
+        if (this.selectedSort==="по убыванию цены")
+        {
+          this.products = this.sortedArrayDown;
+        }
+        if (this.selectedSort==="по возрастанию цены")
+        {
+          this.products = this.sortedArrayUp;
+        }
+        
       }
+      ,
 
     },
     mounted() {
@@ -63,7 +90,18 @@ export default {
         },
         computed:
     {
-      sortedArray: function() {
+      sortedArrayUp: function() {
+    function compare(a, b) {
+      if (a.price < b.price)
+        return -1;
+      if (a.price > b.price)
+        return 1;
+      return 0;
+    }
+    return this.products.sort(compare);
+      },
+
+      sortedArrayDown: function() {
     function compare(a, b) {
       if (a.price < b.price)
         return 1;
@@ -71,9 +109,14 @@ export default {
         return -1;
       return 0;
     }
-
     return this.products.sort(compare);
-      }
+      },
+
+ 
+       SearchFlower(){
+        return this.Search();
+        
+      },
     }
 }
 </script>

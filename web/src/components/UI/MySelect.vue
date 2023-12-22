@@ -1,6 +1,6 @@
 <template>
-   <select>
-    <option disabled value=""> Выберите из списка  </option>
+   <select :value="modelValue" @change="changeOption">
+    <option disabled value="" > Выберите из списка  </option>
     <option>по возрастанию цены</option>
     <option>по убыванию цены</option>
   </select>
@@ -9,6 +9,14 @@
 <script>
 export default {
 name:'my-select',
+
+methods:{
+        changeOption(event)
+        {
+            this.$emit('update:modelValue', event.target.value);
+        }
+    },
+    
 }
 </script>
 
