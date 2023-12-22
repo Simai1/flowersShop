@@ -2,9 +2,6 @@ import { models } from "./index.js";
 const { Client, Order, OrderForProduct, Product } = models;
 
 export default function () {
-    Client.hasMany(Order, {foreignKey: { name: 'orderId', allowNull: false }, as: 'orders' });
-    Order.belongsTo(Client,  { foreignKey: { name: 'orderId', allowNull: false }, as: 'clients' });
-
     Order.belongsToMany(Product, {
         through: OrderForProduct,
         foreignKey: { name: 'orderId', allowNull: false },
@@ -15,6 +12,9 @@ export default function () {
         foreignKey: { name: 'productId', allowNull: false },
         as: 'orders',
     });
+
+    Client.hasMany(Order, {foreignKey: { name: 'clientId', allowNull: true }, as: 'orders' });
+    Order.belongsTo(Client,  { foreignKey: { name: 'clientId', allowNull: true }, as: 'clients' });
 
     OrderForProduct.belongsTo(Order, { foreignKey: { name: 'orderId', allowNull: false }, as: 'orders' });
     Order.hasMany(OrderForProduct, { foreignKey: { name: 'orderId', allowNull: false }, as: 'orderForProducts' });
