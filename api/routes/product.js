@@ -10,6 +10,8 @@ router.route('/flowers').get(asyncRoute(productController.get))
     .patch(asyncRoute(productController.updatePrice))
     .delete(asyncRoute(productController.delete))
 
+router.route('/flowers/top3').get(asyncRoute(productController.get3Products));
+
 router.route('/flowers/:name').get(asyncRoute(productController.getByFilter));
 
 export default router;
