@@ -48,6 +48,7 @@ export default {
      object-fit: cover;
      margin: 1%;
      border-radius: 6px;
+     box-shadow: 3px 2px 2px grey;
     }
   }
 </style>

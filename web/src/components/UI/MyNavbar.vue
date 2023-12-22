@@ -12,7 +12,7 @@
         <a class="nav-link active" aria-current="page" href="#" @click="$router.push('/about')">About</a>
         <a class="nav-link" href="#" @click="$router.push('/shop')">Shop</a>
         <a class="nav-link" href="#" @click="$router.push('/basket')">Cart</a>
-        <button class="btn btn-sm btn-outline-secondary" type="button" @click="showDialog">Me</button>
+        <!-- <button class="btn btn-sm btn-outline-secondary" type="button" @click="showDialog">Me</button> -->
       </div>
     </div>
   </div>

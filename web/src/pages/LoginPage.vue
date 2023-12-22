@@ -20,6 +20,7 @@ export default {
 @import '@/assets/layout/index.scss';
 #LoginPage
 {
+
     position: fixed;
     top:0;
     bottom: 0;
@@ -35,7 +36,7 @@ export default {
 #LoginPage_block
 {
   width: 68%;
-
+  box-shadow: 5px 4px 2px grey;
   display: flex;
   justify-content: center;
   align-items: center;

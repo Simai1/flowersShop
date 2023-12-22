@@ -5,6 +5,7 @@
     ></my-input>
 <my-input
 placeholder="Password"
+type="password"
 ></my-input>
 <my-button class="Login_btn"><span >Login</span></my-button>
   </form>

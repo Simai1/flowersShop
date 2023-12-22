@@ -4,6 +4,7 @@
 v-for="card in cards"
 :key="card.name"
 :card="card"
+:btn_text="btn_txt"
 />
     </div>
 
@@ -17,9 +18,14 @@ export default {
     cards:{
         type:Array,
         required: false,
+    },
+    btn_txt:
+    {
+        type: String,
     }
     
-}
+},
+
 
 }
 </script>
@@ -31,5 +37,6 @@ export default {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 </style>

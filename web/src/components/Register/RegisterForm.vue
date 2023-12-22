@@ -8,6 +8,7 @@
       ></my-input>
   <my-input
   placeholder="Password"
+  type = "password"
   ></my-input>
   <my-button class="Register_btn"><span>Register</span></my-button>
     </form>
