@@ -10,7 +10,7 @@
   </ul>
   <div class="card-body">
     <!-- <a href="#" class="card-link">Card link</a> -->
-    <my-button><span>{{btn_text}}</span></my-button>
+    <my-button @click="pushButton"><span>{{btn_text}}</span></my-button>
   </div>
 </div>
 </template>
@@ -23,6 +23,7 @@ export default {
   data(){
     return{
       image1:'https://otkritkis.com/wp-content/uploads/2022/06/r62xx.jpg',
+      cardN:{},
     }
   },
   props:{
@@ -35,6 +36,33 @@ export default {
         {
           type: String,
         }
+    },
+    methods:
+    {
+      pushButton()
+      {
+
+        if (this.btn_text==="Put in the basket")
+        {
+          console.log(this.$store.state.Nid);
+        this.cardN={
+          id:this.$store.state.Nid,
+          name: this.card.name,
+          description: this.card.description,
+          price: this.card.price,
+          img_url: this.card.img_url,
+
+        };
+        this.$store.commit('addCard',this.cardN);
+        this.$store.commit('incId');
+        console.log(this.$store.state.cart);
+        }
+       if(this.btn_text==="Delete")
+       {
+        this.$store.commit('deleteCard', this.card.id);
+        console.log(this.$store.state.cart);
+       }
+      }
     }
 }
 </script>

@@ -1,6 +1,7 @@
 <template>
   <div id="ShopPage">
     <div class="ShopPage_search">
+      
       <my-input
       v-model="search"
       @change="Search"

@@ -4,6 +4,7 @@
 <div class="NewFlower_cards">
 <flower-list
 :cards="cards"
+:btn_txt="btn_txt"
 />
 </div>
   </div>
@@ -17,7 +18,7 @@ export default {
     data()
     {
         return{
-           
+          btn_txt:'Put in the basket',
           cards:[
                 {
                
