@@ -2,6 +2,7 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
+    isAuth:false,
     Nid:0,
     cart:[
     ],
@@ -25,6 +26,10 @@ export default createStore({
     DeleteCart(state)
     {
         state.cart = [];
+    },
+    AuthUser(state)
+    {
+        state.isAuth = true;
     }
 
   },

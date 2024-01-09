@@ -39,6 +39,7 @@ export default {
         };
         const response = await axios.post('http://localhost:3000/auth/login',data);
         this.$router.push('/about');
+        this.$store.commit('AuthUser');
       }
       catch(e){ 
           alert('Ошибка входа!'); }

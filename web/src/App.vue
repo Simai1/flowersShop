@@ -1,6 +1,8 @@
 <template>
   <div id="App">
-    <my-navbar></my-navbar>
+    <my-navbar
+    v-if = $store.state.isAuth
+    ></my-navbar>
     <router-view></router-view>
   </div>
 </template>
@@ -12,7 +14,6 @@ import MyInput from './components/UI/MyInput.vue'
 
 export default {
   components: { MyInput, LoginForm, LoginBlock },
-
 
 }
 </script>
